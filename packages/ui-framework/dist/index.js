@@ -59,12 +59,6 @@ Object.defineProperty(exports, "FormItem", {
     return _FormItem["default"];
   }
 });
-Object.defineProperty(exports, "Topbar", {
-  enumerable: true,
-  get: function get() {
-    return _Topbar["default"];
-  }
-});
 Object.defineProperty(exports, "DateDisplay", {
   enumerable: true,
   get: function get() {
@@ -113,6 +107,12 @@ Object.defineProperty(exports, "H3", {
     return _H3["default"];
   }
 });
+Object.defineProperty(exports, "Tiny", {
+  enumerable: true,
+  get: function get() {
+    return _Tiny["default"];
+  }
+});
 Object.defineProperty(exports, "Paragraph", {
   enumerable: true,
   get: function get() {
@@ -144,8 +144,6 @@ var _Forms = _interopRequireDefault(require("./Forms"));
 
 var _FormItem = _interopRequireDefault(require("./Forms/FormItem"));
 
-var _Topbar = _interopRequireDefault(require("./Topbar"));
-
 var _DateDisplay = _interopRequireDefault(require("./DateDisplay"));
 
 var _Row = _interopRequireDefault(require("./Grid/Row"));
@@ -159,6 +157,8 @@ var _H = _interopRequireDefault(require("./H1"));
 var _H2 = _interopRequireDefault(require("./H2"));
 
 var _H3 = _interopRequireDefault(require("./H3"));
+
+var _Tiny = _interopRequireDefault(require("./Tiny"));
 
 var _Paragraph = _interopRequireDefault(require("./Paragraph"));
 
