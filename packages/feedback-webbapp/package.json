@@ -2,12 +2,6 @@
   "name": "feedback-webbapp",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0",
-    "@simple/components": "1.0.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -15,7 +9,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "vivy"
   },
   "browserslist": {
     "production": [
@@ -28,5 +22,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@simple/components": "1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "eslint-config-vivy": "^1.0.8"
   }
 }
