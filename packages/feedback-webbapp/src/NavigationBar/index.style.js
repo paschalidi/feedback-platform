@@ -16,6 +16,7 @@ const NavItem = styled.div`
 `;
 
 const LogoutItem = styled.div`
+  text-align: center;
   cursor: pointer;
   font-size: 1.2rem;
   line-height: 1.4rem;

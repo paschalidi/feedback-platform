@@ -6,19 +6,19 @@ import { Styles, NavItem, LogoutItem } from "./index.style";
 
 const NavigationBar = ({ menuItems, location }) => (
   <Styles>
-    <Row position="start" verticalAlign="middle" textAlign="center">
-      <Col lg={3}>
+    <Row fullWidth position="start" verticalAlign="middle" textAlign="center">
+      <Col offset={1} lg={2}>
         <H3>Honesto</H3>
       </Col>
       {Object.values(menuItems).map(item => (
-        <Col lg={2} key={item.route}>
+        <Col lg={1} key={item.route}>
           <NavItem active={item.route === location.pathname}>
             <Link to={item.route}>{item.title}</Link>
           </NavItem>
         </Col>
       ))}
-      <Col lg={1} offset={2}>
-        <div style={{ textAlign: "right " }}>
+      <Col offset={2} lg={1}>
+        <div style={{ textAlign: "right" }}>
           <Tiny>Next Feedback Circle:</Tiny>
           <div>in 4 days</div>
         </div>
