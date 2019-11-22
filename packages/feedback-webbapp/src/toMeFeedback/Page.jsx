@@ -31,11 +31,7 @@ const Page = ({ toMeFeedback }) => {
 };
 
 Page.propTypes = {
-  toMeFeedback: PropTypes.arrayOf({
-    id: PropTypes.number,
-    username: PropTypes.string,
-    feedback: PropTypes.shape({})
-  }).isRequired.isRequired
+  toMeFeedback: PropTypes.arrayOf(PropTypes.shape({})).isRequired.isRequired
 };
 
 const mapProps = props$ => {
