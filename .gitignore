@@ -3,7 +3,7 @@
 #lerna
 lerna-debug.log
 # dependencies
-node_modules/
+node_modules/*
 # testing
 /coverage
 
@@ -14,7 +14,8 @@ node_modules/
 /public/dist/*.js.map
 
 # dist files
-/dist/*
+dist/*
+/packages/ui-framework/dist/*
 /storybook-static/*
 
 # misc
