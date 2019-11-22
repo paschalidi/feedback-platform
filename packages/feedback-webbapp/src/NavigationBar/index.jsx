@@ -4,7 +4,7 @@ import { Col, H3, Row, Tiny } from "@simple/components";
 import { Link, withRouter } from "react-router-dom";
 import { Styles, NavItem, LogoutItem } from "./index.style";
 
-const NavigationBar = ({ menuItems, location }) => (
+const Index = ({ menuItems, location }) => (
   <Styles>
     <Row fullWidth position="start" verticalAlign="middle" textAlign="center">
       <Col offset={1} lg={2}>
@@ -35,7 +35,7 @@ const NavigationBar = ({ menuItems, location }) => (
   </Styles>
 );
 
-NavigationBar.propTypes = {
+Index.propTypes = {
   menuItems: PropTypes.shape({
     title: PropTypes.string,
     route: PropTypes.string
@@ -45,4 +45,4 @@ NavigationBar.propTypes = {
   }).isRequired
 };
 
-export default withRouter(NavigationBar);
+export default withRouter(Index);
