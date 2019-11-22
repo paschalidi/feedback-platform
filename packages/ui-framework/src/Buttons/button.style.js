@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../index";
+import Colors from "../Colors";
 
 const ButtonStyles = styled.div`
   .component-child {
