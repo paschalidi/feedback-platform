@@ -73,6 +73,7 @@ class FeedbackTable extends React.Component {
                 </CaptionStyles>
                 {information.map(user => (
                   <UserInfoStyles
+                    key={user.id}
                     isSelected={selectedUser}
                     active={user.id === selectedUser}
                     onClick={() => this.setSelectedUser(user.id)}
@@ -101,6 +102,7 @@ class FeedbackTable extends React.Component {
                         case "radio":
                           return (
                             <FeedbackRadioQuestion
+                              key={question}
                               question={question}
                               answer={answer}
                               text={text}
@@ -110,6 +112,7 @@ class FeedbackTable extends React.Component {
                         case "text":
                           return (
                             <FeedbackTextQuestion
+                              key={question}
                               question={question}
                               answer={answer}
                               text={text}
@@ -119,6 +122,7 @@ class FeedbackTable extends React.Component {
                         case "scale":
                           return (
                             <FeedbackScaleQuestion
+                              key={question}
                               question={question}
                               answer={answer}
                               text={text}
@@ -141,11 +145,13 @@ class FeedbackTable extends React.Component {
 
 FeedbackTable.propTypes = {
   title: PropTypes.string.isRequired,
-  information: PropTypes.arrayOf({
-    id: PropTypes.number,
-    username: PropTypes.string,
-    feedback: PropTypes.shape({})
-  }).isRequired
+  information: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      username: PropTypes.string,
+      feedback: PropTypes.array
+    })
+  ).isRequired
 };
 
 export default FeedbackTable;
