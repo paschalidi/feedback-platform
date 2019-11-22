@@ -17,7 +17,7 @@ import {
 } from "./styles";
 
 class FeedbackTable extends React.Component {
-  state = { selectedUser: 1 };
+  state = { selectedUser: null };
 
   setSelectedUser = id => this.setState({ selectedUser: id });
 
@@ -73,6 +73,7 @@ class FeedbackTable extends React.Component {
                 </CaptionStyles>
                 {information.map(user => (
                   <UserInfoStyles
+                    isSelected={selectedUser}
                     active={user.id === selectedUser}
                     onClick={() => this.setSelectedUser(user.id)}
                   >

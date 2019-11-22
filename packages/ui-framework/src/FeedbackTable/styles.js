@@ -36,6 +36,9 @@ export const UserInfoStyles = styled.div`
   cursor: pointer;
   height: 96px;
   border-bottom: 1px solid ${Colors.divider};
+  border-right: ${props =>
+    props.isSelected ? "none" : `1px solid ${Colors.divider}`};
+
   &:hover {
     background-color: ${props =>
       props.active ? `${Colors.background}` : `${Colors.primaryDim}`};
