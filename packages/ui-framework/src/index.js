@@ -18,3 +18,4 @@ export { default as H3 } from "./H3";
 export { default as Tiny } from "./Tiny";
 export { default as Paragraph } from "./Paragraph";
 export { default as Caption } from "./Caption";
+export { default as FeedbackTable } from "./FeedbackTable";
