@@ -34,4 +34,5 @@ yarn-error.log*
 # Editor specific
 .idea/
 
-packages/ui-framework/node_modules/.cache/*
+/packages/ui-framework/dist/
+/packages/ui-framework/node_modules/
