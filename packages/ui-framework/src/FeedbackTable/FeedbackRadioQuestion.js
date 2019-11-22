@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Col from "../Grid/Col";
 import Row from "../Grid/Row";
 import { QuestionBoxStyles, QuestionStyles, AnswerStyles } from "./styles";
@@ -20,3 +21,9 @@ export const FeedbackRadioQuestion = ({ question, answer, text }) => (
     </Row>
   </QuestionBoxStyles>
 );
+
+FeedbackRadioQuestion.propTypes = {
+  answer: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};
