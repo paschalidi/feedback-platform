@@ -17,9 +17,9 @@ import {
 } from "./styles";
 
 class FeedbackTable extends React.Component {
-  state = { selectedUser: null };
+  state = { selectedUserId: null };
 
-  setSelectedUser = id => this.setState({ selectedUser: id });
+  setSelectedUser = id => this.setState({ selectedUserId: id });
 
   renderComponentOfType = (type, question, answer, text) => {
     switch (type) {
@@ -57,7 +57,7 @@ class FeedbackTable extends React.Component {
 
   render() {
     const { title, information } = this.props;
-    const { selectedUser } = this.state;
+    const { selectedUserId } = this.state;
     const feedbackPerUser = information.reduce((acc, user) => {
       return { ...acc, [user.id]: user.feedback };
     }, {});
@@ -68,14 +68,14 @@ class FeedbackTable extends React.Component {
           <TableStyles>
             <Row>
               <Col lg={4}>
-                <CaptionStyles>
+                <CaptionStyles isSelected={selectedUserId}>
                   <Caption>{title}</Caption>
                 </CaptionStyles>
                 {information.map(user => (
                   <UserInfoStyles
                     key={user.id}
-                    isSelected={selectedUser}
-                    active={user.id === selectedUser}
+                    isSelected={selectedUserId}
+                    active={user.id === selectedUserId}
                     onClick={() => this.setSelectedUser(user.id)}
                   >
                     <Row verticalAlign="middle">
@@ -92,11 +92,13 @@ class FeedbackTable extends React.Component {
                 ))}
               </Col>
               <Col lg={8}>
-                <FeedbackStyles>
-                  <H3 style={{ margin: 0 }}>Feedback</H3>
-                </FeedbackStyles>
-                {selectedUser &&
-                  feedbackPerUser[selectedUser].map(
+                {selectedUserId && (
+                  <FeedbackStyles>
+                    <H3 style={{ margin: 0 }}>Feedback</H3>
+                  </FeedbackStyles>
+                )}
+                {selectedUserId &&
+                  feedbackPerUser[selectedUserId].map(
                     ({ type, question, answer, text }) => {
                       switch (type) {
                         case "radio":
