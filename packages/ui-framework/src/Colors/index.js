@@ -9,6 +9,8 @@ const colors = {
   active: "#4F0589",
   textPrimary: "#031323",
   divider: "#D9DCDE",
+  blackPearl: "#59636e",
+  primaryDim: "#FBF7FE",
 
   destructive: "#E63644",
   affirmative: "#189F59",

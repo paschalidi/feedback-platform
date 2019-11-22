@@ -1,19 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import Colors from "../Colors";
 
-const TYPE_BASIC = "basic";
-const TYPE_BOLD = "bold";
-
-const CaptionStyles = styled.p`
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-
-  ${({ type }) =>
-    type === TYPE_BOLD &&
-    css`
-      font-weight: 500;
-    `}
+const CaptionStyles = styled.div`
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: ${Colors.blackPearl};
+  font-weight: 500;
 `;
 
 export default function Caption({ children, style, type }) {
@@ -29,11 +25,9 @@ Caption.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
   style: PropTypes.shape({})
 };
 
 Caption.defaultProps = {
-  type: TYPE_BASIC,
   style: {}
 };

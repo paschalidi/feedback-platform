@@ -26,6 +26,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-select": "^3.0.4",
+    "react-user-avatar": "^1.10.0",
     "styled-components": "4.3.2"
   },
   "devDependencies": {
