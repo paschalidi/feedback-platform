@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
+import App from "./app";
 
 const menuItems = {
   0: { title: "Share feedback", route: "/share-feedback" },
   1: { title: "My feedback", route: "/my-feedback" },
-  2: { title: "Team feedback", route: "/team-feedback" },
+  2: { title: "Team feedback", route: "/team-feedback" }
 };
 function Routes() {
   return (
@@ -18,7 +19,9 @@ function Routes() {
           </Route>
           <Route path="/my-feedback">{() => <div>my-feedback</div>}</Route>
           <Route path="/team-feedback">{() => <div>team-feedback</div>}</Route>
-          <Route path="/">{() => <div>home</div>}</Route>
+          <Route path="/">
+            <App />
+          </Route>
         </Switch>
       </Router>
     </React.Fragment>
