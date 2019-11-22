@@ -4,7 +4,7 @@ import Col from "../Grid/Col";
 import Row from "../Grid/Row";
 import { QuestionBoxStyles, QuestionStyles, AnswerStyles } from "./styles";
 
-export const FeedbackScaleQuestion = ({ question, answer, text }) => (
+export const FeedbackScaleQuestion = ({ question, answer }) => (
   <Row>
     <Col lg={12}>
       <QuestionBoxStyles>
@@ -16,7 +16,6 @@ export const FeedbackScaleQuestion = ({ question, answer, text }) => (
             <AnswerStyles>
               <Row verticalAlign="middle">
                 <Col lg={2}> {answer}/10 </Col>
-                <Col lg={10}> {text} </Col>
               </Row>
             </AnswerStyles>
           </Col>
@@ -28,6 +27,5 @@ export const FeedbackScaleQuestion = ({ question, answer, text }) => (
 
 FeedbackScaleQuestion.propTypes = {
   answer: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  question: PropTypes.string.isRequired
 };

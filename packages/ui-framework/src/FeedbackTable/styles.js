@@ -24,6 +24,8 @@ export const TableStyles = styled.div`
 export const CaptionStyles = styled.div`
   padding: 12px 0 14px 13px;
   border-bottom: 1px solid ${Colors.divider};
+  border-right: ${props =>
+    props.isSelected ? "none" : `1px solid ${Colors.divider}`};
 `;
 
 export const FeedbackStyles = styled.div`
