@@ -15,7 +15,7 @@ const Index = ({ menuItems, location }) => (
           <NavItem
             active={
               item.route === location.pathname ||
-              location.pathname.includes(item.route)
+              item.route === `/${location.pathname.split("/")[1]}`
             }
           >
             <Link to={item.route}>{item.title}</Link>
