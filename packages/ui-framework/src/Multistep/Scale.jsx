@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import Colors from "../Colors";
 
 const Box = styled.div`
+  cursor: pointer;
   width: 85px;
   height: 85px;
   border: 2px solid #ffffff;

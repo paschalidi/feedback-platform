@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Paragraph, H1, H2, H3, Caption } from "../index";
+import { Row, Col, H1, H2, H3, Caption } from "../index";
 
 import Styles from "./themeTypography.style";
 
@@ -21,10 +21,6 @@ export default function ThemeTypography() {
           <br />
 
           <h5>Paragraph</h5>
-          <Paragraph>
-            We design products to be open, honest and re­liable. Their
-            interfaces are channels of truth which never obscure our intentions.
-          </Paragraph>
           <br />
 
           <h5>Caption</h5>

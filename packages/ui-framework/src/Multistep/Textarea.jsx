@@ -32,7 +32,7 @@ const Textarea = ({ style, placeholder, onAnswer }) => {
     <TextareaStyles
       style={style}
       placeholder={placeholder}
-      onChange={({ target }) => onAnswer(target.value)}
+      onChange={({ target }) => onAnswer({ text: target.value })}
     />
   );
 };

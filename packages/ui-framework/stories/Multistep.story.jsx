@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Multistep, RadioGroup, Textarea } from "../src/index";
-import Scale from "../src/Multistep/Scale";
+import { Multistep, RadioGroup, Textarea, Scale } from "../src/index";
 
 const information = {
   id: 100,

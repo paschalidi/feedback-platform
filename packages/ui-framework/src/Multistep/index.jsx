@@ -48,38 +48,31 @@ const Multistep = ({ length, handleSubmit, feedback, username, children }) => {
               {children(currentStep)}
               <div style={{ marginTop: 28 }}>
                 <Row textAlign="center">
-                  <Col lg={4}>
+                  <Col lg={6}>
                     <Button
+                      onClick={previousStep}
                       type="secondary"
                       disabled={currentStep === 0}
-                      onClick={previousStep}
                     >
                       Previous
                     </Button>
                   </Col>
-
-                  <Col lg={4}>
-                    <div style={{ justifyContent: "center", display: "flex" }}>
-                      <Button type="secondary">Skip</Button>
-                    </div>
-                  </Col>
-
                   {length === currentStep + 1 ? (
-                    <Col lg={4}>
+                    <Col lg={6}>
                       <Button
+                        onClick={handleSubmit}
                         style={{ float: "right" }}
                         type="secondary"
-                        onClick={handleSubmit}
                       >
                         Submit
                       </Button>
                     </Col>
                   ) : (
-                    <Col lg={4}>
+                    <Col lg={6}>
                       <Button
-                        style={{ float: "right " }}
-                        type="secondary"
                         onClick={nextStep}
+                        style={{ float: "right" }}
+                        type="secondary"
                       >
                         Next
                       </Button>
