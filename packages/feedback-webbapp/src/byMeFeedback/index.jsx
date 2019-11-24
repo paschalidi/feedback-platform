@@ -17,12 +17,9 @@ const Index = ({ byMeFeedback }) => {
     <div>
       <Row>
         <Col>
-          <H2>My Feedback</H2>
+          <H2>Team Feedback</H2>
           {Object.values(byMeFeedback).length ? (
-            <FeedbackTable
-              title="Feedback Received"
-              information={byMeFeedback}
-            />
+            <FeedbackTable title="Feedback Given" information={byMeFeedback} />
           ) : null}
         </Col>
       </Row>
