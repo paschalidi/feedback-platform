@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Multistep, Textarea, RadioGroup } from "../src/index";
+import { Multistep, RadioGroup, Textarea } from "../src/index";
+import Scale from "../src/Multistep/Scale";
 
 const information = {
   id: 100,
@@ -67,12 +68,13 @@ storiesOf("Multistep", module).add("basic", () => (
       {currentStep => {
         switch (feedbackIncrementallyOrdered[currentStep].type) {
           case "text":
-            return <Textarea />;
+            return <Textarea onAnswer={answer => console.log(answer)} />;
           case "scale":
-            return <div>SCALE</div>;
+            return <Scale onAnswer={answer => console.log(answer)} />;
           case "radio": {
             return (
               <RadioGroup
+                onAnswer={answer => console.log(answer)}
                 choices={feedbackIncrementallyOrdered[currentStep].answers}
               />
             );
