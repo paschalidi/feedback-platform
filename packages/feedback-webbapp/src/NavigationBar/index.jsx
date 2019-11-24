@@ -12,7 +12,12 @@ const Index = ({ menuItems, location }) => (
       </Col>
       {Object.values(menuItems).map(item => (
         <Col lg={1} key={item.route}>
-          <NavItem active={item.route === location.pathname}>
+          <NavItem
+            active={
+              item.route === location.pathname ||
+              location.pathname.includes(item.route)
+            }
+          >
             <Link to={item.route}>{item.title}</Link>
           </NavItem>
         </Col>
