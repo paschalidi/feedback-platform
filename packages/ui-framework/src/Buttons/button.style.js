@@ -81,7 +81,7 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      color: ${Colors.textPrimary};
+      color: ${Colors.white};
       background-color: ${Colors.secondary};
       border: 1px solid ${Colors.secondary};
     }
