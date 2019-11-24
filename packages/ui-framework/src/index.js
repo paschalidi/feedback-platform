@@ -19,3 +19,6 @@ export { default as Tiny } from "./Tiny";
 export { default as Paragraph } from "./Paragraph";
 export { default as Caption } from "./Caption";
 export { default as FeedbackTable } from "./FeedbackTable";
+export { default as Multistep } from "./Multistep";
+export { default as RadioGroup } from "./Multistep/RadioGroup";
+export { default as TextArea } from "./Multistep/TextArea";
