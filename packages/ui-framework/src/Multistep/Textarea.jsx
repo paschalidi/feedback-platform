@@ -7,7 +7,7 @@ const TextareaStyles = styled.textarea`
   padding: 20px;
   font-size: 1.6rem;
   width: calc(100% - 40px);
-  min-height: 200px;
+  min-height: 232px;
   max-height: 15em;
   background-color: #ffffff;
   border: solid 1px ${Colors.divider};
@@ -27,13 +27,20 @@ const TextareaStyles = styled.textarea`
   }
 `;
 
-const Textarea = ({ style, placeholder }) => {
-  return <TextareaStyles style={style} placeholder={placeholder} />;
+const Textarea = ({ style, placeholder, onAnswer }) => {
+  return (
+    <TextareaStyles
+      style={style}
+      placeholder={placeholder}
+      onChange={({ target }) => onAnswer({ text: target.value })}
+    />
+  );
 };
 
 Textarea.propTypes = {
   style: PropTypes.shape({}),
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  onAnswer: PropTypes.func.isRequired
 };
 
 Textarea.defaultProps = {

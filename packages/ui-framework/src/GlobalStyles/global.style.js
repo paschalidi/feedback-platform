@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import { Colors } from "../index";
+import "react-rater/lib/react-rater.css";
 
 const GlobalStyles = createGlobalStyle`
+
   html{
     font-size: 62.5%;
   }

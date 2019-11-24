@@ -6,11 +6,12 @@ import Colors from "../Colors";
 const TextareaStyles = styled.label`
   cursor: pointer;
   margin: 10px 0;
+
   &:first-child {
-    margin: 17px 0 10px 0;
+    margin-top: 0px;
   }
   &:last-child {
-    margin: 10px 0 36px 0;
+    margin-bottom: 36px;
   }
   display: block;
   padding: 19px 78px 20px 31px;

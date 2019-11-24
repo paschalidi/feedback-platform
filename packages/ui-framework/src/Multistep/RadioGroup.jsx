@@ -2,10 +2,11 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import RadioText from "./RadioText";
 
-const RadioGroup = ({ choices }) => {
+const RadioGroup = ({ choices, onAnswer }) => {
   const [select, setSelect] = useState("betterPriceOnly");
-  const handleSelectChange = ({ target }) => {
-    setSelect(target.value);
+  const handleSelectChange = event => {
+    onAnswer(choices[event.target.value]);
+    setSelect(event.target.value);
   };
 
   return (
@@ -28,7 +29,8 @@ const RadioGroup = ({ choices }) => {
 RadioGroup.propTypes = {
   choices: PropTypes.arrayOf(
     PropTypes.shape({ answer: PropTypes.string, position: PropTypes.number })
-  ).isRequired
+  ).isRequired,
+  onAnswer: PropTypes.func.isRequired
 };
 
 export default RadioGroup;
