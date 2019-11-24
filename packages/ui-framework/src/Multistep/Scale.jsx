@@ -9,13 +9,9 @@ const Box = styled.div`
   width: 85px;
   height: 85px;
   border: 2px solid #ffffff;
-  background: ${({ isActive, willBeActive }) => {
+  background: ${({ isActive }) => {
     if (isActive) {
       return Colors.active;
-    }
-
-    if (willBeActive) {
-      return Colors.primary;
     }
 
     return Colors.background;
@@ -23,7 +19,7 @@ const Box = styled.div`
 `;
 
 const Scale = ({ onAnswer }) => (
-  <Rater total={10} onRate={({ rating }) => onAnswer({ scale: rating })}>
+  <Rater total={10} onRating={({ rating }) => onAnswer({ scale: rating })}>
     <Box />
   </Rater>
 );
