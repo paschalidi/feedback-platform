@@ -3,7 +3,7 @@ import Colors from "../Colors";
 
 const ButtonStyles = styled.div`
   .component-child {
-    font-family: "Untitled Sans";
+    font-family: "Untitled Sans", sans-serif;
     font-size: 1.6rem;
     display: flex;
     align-items: center;
@@ -28,18 +28,6 @@ const ButtonStyles = styled.div`
     display: block;
     text-decoration: none;
     cursor: pointer;
-  }
-
-  a {
-    border-radius: 4px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  a:focus:active,
-  button:focus:active {
-    outline: 0;
   }
 
   .primary {
@@ -81,7 +69,7 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      color: ${Colors.textPrimary};
+      color: ${Colors.white};
       background-color: ${Colors.secondary};
       border: 1px solid ${Colors.secondary};
     }
