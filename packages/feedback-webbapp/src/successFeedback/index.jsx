@@ -6,7 +6,7 @@ const SuccessFeedback = () => {
     <React.Fragment>
       <Row>
         <Col>
-          <H2>
+          <H2 style={{ marginTop: 75 }}>
             Thank you for sharing your feedback!
           </H2>
         </Col>

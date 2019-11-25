@@ -17,7 +17,7 @@ const Index = ({ toMeFeedback }) => {
     <div>
       <Row>
         <Col>
-          <H2>My Feedback</H2>
+          <H2 style={{ marginTop: 75 }}>My Feedback</H2>
           {Object.values(toMeFeedback).length ? (
             <FeedbackTable
               title="Feedback Received"
