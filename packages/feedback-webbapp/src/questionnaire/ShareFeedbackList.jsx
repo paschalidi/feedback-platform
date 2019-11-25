@@ -29,7 +29,7 @@ const ShareFeedbackList = ({ shareFeedback }) => {
     <React.Fragment>
       <Row>
         <Col>
-          <H2>Share Feedback</H2>
+          <H2 style={{ marginTop: 75 }}>Share Feedback</H2>
           {Object.values(shareFeedback).length ? (
             <TableStyles>
               {Object.values(shareFeedback).map(userInfo => (
