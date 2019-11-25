@@ -17,7 +17,7 @@ const Index = ({ byMeFeedback }) => {
     <div>
       <Row>
         <Col>
-          <H2>Team Feedback</H2>
+          <H2 style={{ marginTop: 75 }}>Team Feedback</H2>
           {Object.values(byMeFeedback).length ? (
             <FeedbackTable title="Feedback Given" information={byMeFeedback} />
           ) : null}

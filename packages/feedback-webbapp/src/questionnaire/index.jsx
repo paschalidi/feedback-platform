@@ -21,48 +21,50 @@ const Questionnaire = ({ location, history }) => {
     }, {});
 
   return (
-    <Multistep
-      length={Object.values(feedbackIncrementallyOrdered).length}
-      handleSubmit={() => {
-        history.push("/success-feedback");
-      }}
-      feedback={feedbackIncrementallyOrdered}
-      username={userInfo.username}
-    >
-      {currentStep => {
-        const { question, id } = feedbackIncrementallyOrdered[currentStep];
-        switch (feedbackIncrementallyOrdered[currentStep].type) {
-          case "text":
-            return (
-              <Textarea
-                onAnswer={({ text }) =>
-                  handleSetAnswer(id, question, text, "text")
-                }
-              />
-            );
-          case "scale":
-            return (
-              <Scale
-                onAnswer={({ scale }) =>
-                  handleSetAnswer(id, question, scale, "scale")
-                }
-              />
-            );
-          case "radio": {
-            return (
-              <RadioGroup
-                onAnswer={answer =>
-                  handleSetAnswer(id, question, answer, "radio")
-                }
-                choices={feedbackIncrementallyOrdered[currentStep].answers}
-              />
-            );
+    <div style={{ marginTop: 75 }}>
+      <Multistep
+        length={Object.values(feedbackIncrementallyOrdered).length}
+        handleSubmit={() => {
+          history.push("/success-feedback");
+        }}
+        feedback={feedbackIncrementallyOrdered}
+        username={userInfo.username}
+      >
+        {currentStep => {
+          const { question, id } = feedbackIncrementallyOrdered[currentStep];
+          switch (feedbackIncrementallyOrdered[currentStep].type) {
+            case "text":
+              return (
+                <Textarea
+                  onAnswer={({ text }) =>
+                    handleSetAnswer(id, question, text, "text")
+                  }
+                />
+              );
+            case "scale":
+              return (
+                <Scale
+                  onAnswer={({ scale }) =>
+                    handleSetAnswer(id, question, scale, "scale")
+                  }
+                />
+              );
+            case "radio": {
+              return (
+                <RadioGroup
+                  onAnswer={answer =>
+                    handleSetAnswer(id, question, answer, "radio")
+                  }
+                  choices={feedbackIncrementallyOrdered[currentStep].answers}
+                />
+              );
+            }
+            default:
+              return <div />;
           }
-          default:
-            return <div />;
-        }
-      }}
-    </Multistep>
+        }}
+      </Multistep>
+    </div>
   );
 };
 
