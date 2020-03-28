@@ -5,7 +5,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import NavigationBar from "./navigationBar";
+import NavigationBar from "./NavigationBar";
 import FeedbackToMePage from "./toMeFeedback";
 import FeedbackByMePage from "./byMeFeedback";
 import ShareFeedbackList from "./questionnaire/ShareFeedbackList";
